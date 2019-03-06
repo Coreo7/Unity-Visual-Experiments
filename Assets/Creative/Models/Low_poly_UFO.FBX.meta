@@ -1,16 +1,32 @@
 fileFormatVersion: 2
-guid: 877552487732abb4b9a04aa7c2bd7d50
+guid: b34988aa1cd6af54b8e56394dcacdb3f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: default
-    100002: //RootNode
-    400000: default
-    400002: //RootNode
-    2100000: defaultMat
-    2300000: default
-    3300000: default
-    4300000: default
+    100000: //RootNode
+    100002: mr Area Spot001
+    100004: mr Area Spot001.Target
+    100006: mr Area Spot002
+    100008: mr Area Spot002.Target
+    100010: UFO_body
+    100012: UFO_cockpit
+    400000: //RootNode
+    400002: mr Area Spot001
+    400004: mr Area Spot001.Target
+    400006: mr Area Spot002
+    400008: mr Area Spot002.Target
+    400010: UFO_body
+    400012: UFO_cockpit
+    2100000: UFO_texture
+    2100002: UFO_texture2
+    2300000: UFO_body
+    2300002: UFO_cockpit
+    3300000: UFO_body
+    3300002: UFO_cockpit
+    4300000: UFO_body
+    4300002: UFO_cockpit
+    10800000: mr Area Spot001
+    10800002: mr Area Spot002
   externalObjects: {}
   materials:
     importMaterials: 1

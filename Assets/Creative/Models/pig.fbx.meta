@@ -1,16 +1,86 @@
 fileFormatVersion: 2
-guid: e582f98b1d3eda94b89d2142978f24b2
+guid: 82e9d76a588dfd141b6ad46092722b27
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: default
-    400000: //RootNode
-    400002: default
-    2100000: defaultMat
-    2300000: default
-    3300000: default
-    4300000: default
+    100000: body
+    100002: Camera
+    100004: ear 1
+    100006: ear 2
+    100008: eye 1
+    100010: eye 3
+    100012: Lamp
+    100014: leg 1
+    100016: leg 2
+    100018: leg 3
+    100020: leg 4
+    100022: nose
+    100024: //RootNode
+    100026: queue
+    100028: scene
+    400000: body
+    400002: Camera
+    400004: ear 1
+    400006: ear 2
+    400008: eye 1
+    400010: eye 3
+    400012: Lamp
+    400014: leg 1
+    400016: leg 2
+    400018: leg 3
+    400020: leg 4
+    400022: nose
+    400024: //RootNode
+    400026: queue
+    400028: scene
+    2000000: Camera
+    2100000: queue material
+    2100002: Material.004
+    2100004: nose
+    2100006: core (nose)
+    2100008: feet material
+    2100010: legs material
+    2100012: eyes material
+    2100014: pupils material
+    2100016: Material (body)
+    2100018: ear -Material
+    2300000: body
+    2300002: ear 1
+    2300004: ear 2
+    2300006: eye 1
+    2300008: eye 3
+    2300010: leg 1
+    2300012: leg 2
+    2300014: leg 3
+    2300016: leg 4
+    2300018: nose
+    2300020: queue
+    2300022: scene
+    3300000: body
+    3300002: ear 1
+    3300004: ear 2
+    3300006: eye 1
+    3300008: eye 3
+    3300010: leg 1
+    3300012: leg 2
+    3300014: leg 3
+    3300016: leg 4
+    3300018: nose
+    3300020: queue
+    3300022: scene
+    4300000: queue
+    4300002: scene
+    4300004: nose
+    4300006: leg 4
+    4300008: leg 3
+    4300010: leg 1
+    4300012: leg 2
+    4300014: eye 3
+    4300016: eye 1
+    4300018: ear 2
+    4300020: ear 1
+    4300022: body
+    10800000: Lamp
   externalObjects: {}
   materials:
     importMaterials: 1
