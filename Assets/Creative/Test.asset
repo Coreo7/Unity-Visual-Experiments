@@ -174,7 +174,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.22
+    value: 0.596
   fastMode:
     overrideState: 0
     value: 0
@@ -190,10 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b48fb662878e43d6b0a99ca0c1a8c24, type: 3}
   m_Name: RenderWithMaterial
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
-    value: 1
+    value: 0
   material:
     overrideState: 1
     value: {fileID: 2100000, guid: 4dd0daa9715c0ba4bb16018308ce9000, type: 2}
@@ -258,7 +258,7 @@ MonoBehaviour:
     value: 1
   material:
     overrideState: 1
-    value: {fileID: 2100000, guid: b41ba31a89ccb4d8fa96e9ec09253174, type: 2}
+    value: {fileID: 2100000, guid: 1c6e4499c090e434cbdd22314f4daf82, type: 2}
   depthMode:
     overrideState: 0
     value: 0

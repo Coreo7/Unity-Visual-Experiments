@@ -7,17 +7,19 @@ using DG.Tweening;
 
 public class FattenUp : MonoBehaviour
 {
-    public float FatJuice = 3, speed = .2f;
-    [SerializeField]
+    public bool ShouldFollowMaster = false;
+    public float FatJuice = 3, Speed = .2f;
     public int NoteTrigger = 48, Channel = 1;
+    public List<GameObject> SkinnyBois;
 
     private float StartScale;
-
+    private MasterValues masterValues;
 
     private void OnEnable()
     {
-    //    MidiMaster.noteOnDelegate += NoteOn;
+        MidiMaster.noteOnDelegate += NoteOn;
         StartScale = transform.localScale.x;
+        masterValues = gameObject.GetComponent<MasterValues>();
     }
     private void OnDisable()
     {
@@ -32,7 +34,11 @@ public class FattenUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (ShouldFollowMaster)
+        {
+            FatJuice = FatJuice * masterValues.MasterIntensity;
+            Speed = Speed * masterValues.MasterSpeed;
+        }
     }
 
     void NoteOn(MidiChannel channel, int note, float velocity)
@@ -43,16 +49,18 @@ public class FattenUp : MonoBehaviour
         {
             if (NoteTrigger == note)
             {
-                print("FOURTY EIGHT");
-                transform.DOScale(FatJuice * velocity, speed).SetEase(Ease.OutFlash);
-                StartCoroutine(goBack());
+                foreach (GameObject go in SkinnyBois)
+                {
+                    go.transform.DOScale(FatJuice * velocity, Speed).SetEase(Ease.OutFlash);
+                    StartCoroutine(goBack(go));
+                }
             }
         }
     }
 
-    IEnumerator goBack()
+    IEnumerator goBack(GameObject go)
     {
-        yield return new WaitForSeconds(speed / 2);
-        transform.DOScale(StartScale, speed).SetEase(Ease.OutFlash);
+        yield return new WaitForSeconds(Speed / 2);
+        go.transform.DOScale(StartScale, Speed).SetEase(Ease.OutFlash);
     }
 }

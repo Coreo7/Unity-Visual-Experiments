@@ -9,7 +9,13 @@ public class ClockedRotate : MonoBehaviour
     public float Speed;
     public int NoteTrigger = 50, Channel = 1, CurrrentAngle = 0;
 
+    public List<GameObject> ObjectsToEffect;
+
     public List<Vector3> SavedAngles;
+
+    public AnimationCurve EaseCurve;
+
+    private bool isCoolingDown = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,20 +42,35 @@ public class ClockedRotate : MonoBehaviour
     {
         Debug.Log("RotateOn: " + channel + "," + note + "," + velocity);
 
-        if (Channel == (int)channel + 1)
+
+        if (Channel == (int)channel + 1 && !isCoolingDown)
         {
+            isCoolingDown = true;
+            StartCoroutine(Cooldown());
+
+
             if (NoteTrigger == note)
             {
-                if (CurrrentAngle < SavedAngles.Count)
+                foreach (GameObject go in ObjectsToEffect)
                 {
-                    transform.DORotate(SavedAngles[CurrrentAngle], Speed).SetEase(Ease.OutFlash);
-                    CurrrentAngle++;
+                    if (CurrrentAngle < SavedAngles.Count)
+                    {
+                        go.transform.DORotate(SavedAngles[CurrrentAngle], Speed).SetEase(EaseCurve);
+                    }
+                    else
+                    {
+                        CurrrentAngle = 0;
+                        go.transform.DORotate(SavedAngles[CurrrentAngle], Speed).SetEase(EaseCurve);
+                    }
                 }
-                else
-                {
-                    CurrrentAngle = 0;
-                }
+                CurrrentAngle++;
             }
         }
+    }
+
+    IEnumerator Cooldown()
+    {
+        yield return null;
+        isCoolingDown = false;
     }
 }
