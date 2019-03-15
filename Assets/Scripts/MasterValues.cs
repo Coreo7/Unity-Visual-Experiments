@@ -14,24 +14,24 @@ public class MasterValues : MonoBehaviour
 
     void NoteOn(MidiChannel channel, int note, float velocity)
     {
-        Debug.Log("NoteOn: " + channel + "," + note + "," + velocity);
+      //  Debug.Log("NoteOn: " + channel + "," + note + "," + velocity);
     }
 
     void NoteOff(MidiChannel channel, int note)
     {
-        Debug.Log("NoteOff: " + channel + "," + note);
+       // Debug.Log("NoteOff: " + channel + "," + note);
     }
 
     void Knob(MidiChannel channel, int knobNumber, float knobValue)
     {
         if(MasterSpeedKnob == knobNumber)
         {
-            MasterSpeed = knobValue * SpeedMultiplier;
+            MasterSpeed = knobValue * SpeedMultiplier +.01f;
         }
         
         if(MasterIntensityKnob == knobNumber)
         {
-            MasterIntensity = knobValue * IntensityMultiplier;
+            MasterIntensity = knobValue * IntensityMultiplier + .01f;
         }
     }
 

@@ -40,7 +40,7 @@ public class ClockedRotate : MonoBehaviour
 
     void NoteOn(MidiChannel channel, int note, float velocity)
     {
-        Debug.Log("RotateOn: " + channel + "," + note + "," + velocity);
+        //Debug.Log("RotateOn: " + channel + "," + note + "," + velocity);
 
 
         if (Channel == (int)channel + 1 && !isCoolingDown)
