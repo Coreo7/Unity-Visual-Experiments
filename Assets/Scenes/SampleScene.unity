@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 171010971}
   - component: {fileID: 171010973}
   - component: {fileID: 171010972}
+  - component: {fileID: 171010974}
   m_Layer: 0
   m_Name: Learning
   m_TagString: Untagged
@@ -404,13 +405,19 @@ VisualEffect:
   m_ResetSeedOnPlay: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 1000
+        m_Name: _myFloat
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
       m_Array: []
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0, y: 0, z: 0, w: 0}
+        m_Name: myColor
+        m_Overridden: 0
     m_Uint:
       m_Array: []
     m_Int:
@@ -425,6 +432,20 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
+--- !u!114 &171010974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171010970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d0a07f807370443ab577db63390958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnAmount: 9999
+  effect: {fileID: 171010973}
 --- !u!1 &182515395
 GameObject:
   m_ObjectHideFlags: 0
